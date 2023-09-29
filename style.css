@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* .parent{
+    height: 100vh;
+} */
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+body{
+    background-color: black;
+}
+div{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(74, 88, 44);
+    animation: sample 6s forwards infinite;
+    border-radius: 7px;
+    box-shadow: 2px 1px 3px 3px #e7e5e5;
+}
+@keyframes sample {
+    0%{
+        transform: translate(0,0);
+        
+    }
+    25%{
+        transform: translate(1000px,0);
+       
+        background: linear-gradient( to top, rgb(122, 42, 112), blue, green);
+    }
+    50%{
+        transform: translate(1000px,420px);
+        background: linear-gradient( to top, rgb(196, 157, 190),rgb(8, 92, 117),green);
+
+    }
+    75%{
+        transform: translate(0,420px);
+        background: linear-gradient( to top, rgb(122, 42, 112),rgb(162, 194, 104),green);
+
+    }
+    100%{
+        transform: translate(0,0);
+        background: linear-gradient( to top, rgb(122, 42, 112),rgb(0, 255, 149),rgb(117, 212, 28));
+
+    }
+}
+@media  screen and (max-width:650px) {
+  p{
+    margin-right: 30px;
+    margin-bottom: 150px;
+  }
+  div{
+    width: 60px;
+    height: 60px;
+  }
+    @keyframes sample {
+        0%{
+            transform: translate(0,0);
+            background: linear-gradient( to top, rgb(122, 42, 112), rgb(73, 73, 97), rgb(45, 112, 133));
+
+        }
+        25%{
+            transform: translate(314px,0);
+            background: linear-gradient( to top, rgb(122, 42, 112), rgb(33, 33, 39), rgb(128, 76, 119));
+
+        }
+        50%{
+            transform: translate(314px,420px);
+            background: linear-gradient( to top, rgb(196, 157, 190),rgb(8, 92, 117),#4c574c);
+
+        }
+        75%{
+            transform: translate(0,420px);
+            background: linear-gradient( to top, rgb(122, 42, 112),rgb(0, 255, 149),rgb(117, 212, 28));
+
+        }
+        100%{
+            transform: translate(0,0);
+        }
+    }
+}
